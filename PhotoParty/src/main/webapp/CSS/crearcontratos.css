@@ -1,0 +1,526 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /*Columna 2 formulario*/
+  .column2 {
+    width: 35%;
+    margin-left: 20%;
+  
+  }
+  .esp{
+    float: left;
+  }
+  
+  .fbox {
+  
+    width: 400px;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #000000;
+    opacity: 0.9;
+    margin: auto;
+    text-align: center;
+  
+  
+  }
+  
+  .fbox .ubox {
+    position: relative;
+    opacity: 0.9;
+  }
+  
+  .fbox .ubox input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+  
+    background: transparent;
+  }
+  .fbox .ubox select {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+  
+    background: transparent;
+  }
+  
+
+  .fbox .ubox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .fbox .ubox input:focus~label,
+  .fbox .ubox input:valid~label {
+    top: -20px;
+    left: 0;
+    color: #4c4c4c;
+    font-size: 12px;
+  }
+  .fbox .ubox select:focus~label,
+  .fbox .ubox select:valid~label {
+    top: -20px;
+    left: 0;
+    color: #4c4c4c;
+    font-size: 12px;
+  }
+  
+  .admon {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 87px;
+  
+  }
+
+  .fbox h2{
+    text-align: center;
+  }
+  /* Fin de form*/
+  
+  /*menu desplegable del admin*/
+  
+  .tit-col1 {
+    text-align: center;
+    font-size: 45px;
+    color: #b79c05;
+    margin-bottom: 20%;
+    display: block;
+  }
+  
+  .mov {
+    margin-left: 10%;
+    width: 20%;
+    display: block;
+    margin-top: 1.6rem;
+  }
+  
+  .column1 {
+    margin-bottom: 15px;
+    width: 100%;
+    display: block;
+
+  }
+
+  .select-menu {
+    width: 100%;
+    margin-bottom: 20px;
+    align-items: center;
+  
+    display: block;
+  }
+  
+  .select-menu .select-btn:hover {
+    background: #a5a5a5;
+  }
+  
+  .select-menu .select-btn {
+    display: flex;
+    height: 55px;
+    background: #fffefe;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .select-menu .options {
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #ffffff;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Fondo con opacidad */
+    display: none;
+  
+  }
+  
+  .select-menu.active .options {
+    display: block;
+  
+  }
+  
+  .options .option {
+  
+    height: 55px;
+    cursor: pointer;
+    padding: 0 1px;
+    border-radius: 8px;
+    align-items: center;
+    background: #fff;
+    display: block;
+    border-bottom: 2px solid #b5b2b2;
+    margin-top: 3px;
+  
+  }
+  
+  .options .option:hover {
+    background: #b7b7b7;
+    border-bottom: 2px solid #828282;
+  }
+  
+  
+  .option .option-text {
+    font-size: 18px;
+    color: #333;
+    display: block;
+    padding: 20px;
+  }
+  
+
+  /*Modo responsive*/
+  
+  @media screen and (max-width: 1240px) {
+    .column2 {
+      width: 320px;
+      margin-left: 10%;
+  
+    }
+  
+    
+    .select-menu .select-btn {
+      width: 100%;
+    }
+  
+    .mov {
+      width: 250px;
+      margin-left: 10%;
+    }
+  
+    .fbox {
+      width: 100%;
+    }
+  
+    .select-menu .select-btn {
+      width: 100%;
+    }
+  
+    .option .option-text {
+      padding: 6px;
+    }
+  }
+  
+  @media screen and (max-width: 840px) {
+  
+    .option .option-text {
+      padding: 5px;
+    }
+  
+  
+  
+    .mov {
+      width: 240px;
+      font-size: 5px;
+      margin-left: 5%;
+  
+    }
+  
+    .select-menu {
+      width: 100%;
+      font-size: 15px;
+      margin-left: 0%;
+  
+  
+    }
+  
+    .column2 {
+      margin-left: 5%;
+    }
+  
+  }
+  
+  @media screen and (max-width: 720px) {
+  
+    .tit-col1{
+    margin-left: 70%;
+  
+  
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+  
+    }
+  
+    .select-menu {
+      margin-right: 3%;
+  
+    }
+  
+    .mov {
+      margin: 0 auto;
+      margin-bottom: 45%;
+      width: 40%;
+      margin-left: 0;
+    
+  
+    }
+  
+  
+    .column1 {
+      position: absolute;
+      margin-top: 50px;
+      margin-left: 0;
+      display: flex;
+      z-index: 50;
+    }
+  
+    .column2 {
+      margin: 0 auto;
+      /* Añade esta línea para centrar horizontalmente el carrusel */
+  
+    }
+  
+    .options .option {
+      width: 100%;
+  
+    }
+  
+    .option .option-text {
+      font-size: 13px;
+      padding: 10px;
+    }
+  
+    @media screen and (max-width: 570px) {
+  
+    
+  
+      .tit-col1 {
+        margin-bottom: 3%;
+  
+    }
+  
+  }
+  @media screen and (max-width: 450px) {
+    .tit-col1 {
+      margin-left: 50%;
+        
+  
+  }
+    .column1 {
+      position:static;
+      margin-top: 50px;
+      margin: 10px ;
+      margin-left: 50%;
+      display:block;
+      z-index: 0;
+    }
+    .select-menu .select-btn {
+      width: 200px;
+    }
+    
+    .options .option {
+      width: 170px;
+  
+    }
+    .mov {
+      margin: 0 auto;
+      margin-bottom: 10%;
+      width: 40%;
+      margin-left: 0;
+    
+  
+    }
+    .column2 {
+      width: 275px;
+  
+  
+    }
+  
+  
+  }
+  /*Fin modo responsive*/
+  
+  }
+  /* Estilos para el input submit */
+  .btn input[type="submit"] {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+  
+  .btn input[type="submit"] {
+  
+    transition: background-color 0.3s, color 0.3s, opacity 0.3s, transform 0.3s;
+  }
+  
+  .btn input[type="submit"]:hover {
+    background-color: #fff;
+    color: #272727;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  
+  .btn input[type="submit"]:focus,
+  .btn input[type="submit"]:active {
+    opacity: 0.5;
+  }
+  
+  .btn input[type="submit"]:hover:not(:focus) {
+    opacity: 0.9;
+    filter: brightness(90%);
+  }
+
+/*Diseño del select---------------------------------------------------------------*/
+
+/* Estilo para los elementos select personalizados */
+.select2 {
+  width: 100%; /* Hacer que el bloque ocupe el 100% del bloque padre para alinear la flecha personalizada correctamente */
+  /* Eliminar la flecha del navegador */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: 10px;
+  /* Definir el fondo y el borde personalizado */
+  border: 1px solid #7E9BBD;
+  border-radius: 6px;
+  background-color: #fff;
+
+  /* Espacios entre el borde y el texto */
+  padding: 10px 35px 10px 15px;
+
+  /* Eliminar el contorno predeterminado */
+  outline: none;
+
+  cursor: pointer;
+}
+
+/* Eliminar la flecha en IE 10 y 11 */
+.select2::-ms-expand {
+  display: none;
+}
+
+/* Al hacer clic - quitar el contorno predeterminado y agregar el nuestro */
+.select2:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 1px #3b3b3b, 0px 0px 10px #2a2a2a;
+}
+
+/* Hacer .select-wrapper el elemento principal para posicionar la "flecha" */
+.select-wrapper {
+  position: relative;
+}
+
+/* Dibujar la "flecha" */
+.select-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 63%;
+  right: 15px;
+  transform: translateY(-50%);
+  display: block;
+
+  /* Dibujar un triángulo */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10.4px 6px 0 6px;
+  border-color: #3f3f3f transparent transparent transparent;
+
+  /* Desactivar la interacción con el triángulo */
+  pointer-events: none;
+}
+.op{
+  cursor: pointer;
+}
+.select2 option {
+  background-color: #fff; /* Fondo blanco */
+  cursor: pointer;
+  color: #333; /* Texto oscuro */
+  padding: 10px; /* Espaciado interno */
+  font-size: 14px; /* Tamaño de fuente */
+}
+
+/* Estilo para los elementos option cuando están seleccionados */
+.select2 option:checked {
+  background-color: #7E9BBD; /* Fondo en tono azul */
+  color: #fff; /* Texto en blanco */
+}
+
+/*-------------------------------------------------------------------------------*/
+
+.pie-enlace ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: aliceblue;
+  display: block;
+  margin-bottom: 15px;
+  transition: all .3s ease;
+}
+
+.pie-enlace ul li a:hover {
+  color: aliceblue;
+}
+
+.social-link a {
+  display:inline-block;
+  min-height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: aliceblue;
+  margin-top: 150px;
+  transition: all .5s ease;
+}
+.social-link a i{
+  margin-top: 10px;
+}
+.social-link a:hover {
+  background-color: #00C3FF;
+}
+/*-------------------------------------------------------------------------------*/
